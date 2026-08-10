@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fsdh_app/onboarding_screen.dart';
-import '../../theme/app_colors.dart';
+import 'onboarding_screen.dart';
+import '../theme/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -29,7 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image(image: AssetImage('assets/images/splash_logo.png'))
+            Image(
+              image: AssetImage('assets/images/splash_logo.png')
+            ),
           ],
         ),
       ),

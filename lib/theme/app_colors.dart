@@ -15,7 +15,7 @@ class AppColors {
   static const textPrimary = Color(0xFF001526);
   static const textSecondary = Color(0xFF525F66);
   static const textMuted = Color(0xFF65727B);
-  static const textFaint = Color(0xFF8D8D8D);
+  static const textFaint = Color(0xFF757575);
 
   static const surface = Color(0xFFFFFFFF);
   static const surfaceMuted = Color(0xFFF2F4F7);
