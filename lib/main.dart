@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
-import 'theme/app_colors.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const FsdhApp());
@@ -14,12 +14,12 @@ class FsdhApp extends StatelessWidget {
     return MaterialApp(
       title: 'FSDH Asset Management',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: AppColors.primary,
-        scaffoldBackgroundColor: AppColors.surface,
-        fontFamily: 'Roboto',
-      ),
+      // Single app-wide theme. Previously the onboarding flow got its
+      // field styling from a second MaterialApp nested in SignUpScreen;
+      // that nesting broke navigation, so the theme it carried
+      // (AppTheme.light, which configures inputDecorationTheme) is now
+      // applied here at the root for every screen.
+      theme: AppTheme.light,
       home: const SplashScreen(),
     );
   }

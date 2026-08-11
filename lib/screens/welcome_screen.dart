@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                       Image.asset(
                           'assets/images/welcome_logo.png',
                       ),
-                      const SizedBox(height: 28),
+                      const SizedBox(height: 25),
                       const Text(
                         'Welcome to AM',
                         style: TextStyle(

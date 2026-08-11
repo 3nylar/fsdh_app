@@ -15,6 +15,7 @@ class LabeledTextField extends StatefulWidget {
   final String? successText;
   final ValueChanged<String>? onChanged;
   final bool enabled;
+  final TextInputType? keyboardType;
 
   const LabeledTextField({
     super.key,
@@ -26,6 +27,7 @@ class LabeledTextField extends StatefulWidget {
     this.successText,
     this.onChanged,
     this.enabled = true,
+    this.keyboardType,
   });
 
   @override
@@ -53,6 +55,12 @@ class _LabeledTextFieldState extends State<LabeledTextField> {
   }
 
   Widget? get _statusIcon {
+    if (widget.status == FieldStatus.error) {
+      return const Icon(
+          Icons.error,
+          color: AppColors.error
+      );
+    }
     if (widget.isPassword) {
       return IconButton(
         icon: Icon(
@@ -63,10 +71,10 @@ class _LabeledTextFieldState extends State<LabeledTextField> {
       );
     }
     if (widget.status == FieldStatus.success) {
-      return const Icon(Icons.check_circle, color: AppColors.success);
-    }
-    if (widget.status == FieldStatus.error) {
-      return const Icon(Icons.error, color: AppColors.error);
+      return const Icon(
+        Icons.check_circle,
+        color: AppColors.success
+      );
     }
     return null;
   }
@@ -89,25 +97,38 @@ class _LabeledTextFieldState extends State<LabeledTextField> {
           controller: widget.controller,
           obscureText: widget.isPassword && _obscure,
           enabled: widget.enabled,
+          keyboardType: widget.keyboardType,
           onChanged: widget.onChanged,
           decoration: InputDecoration(
             hintText: 'Placeholder',
             suffixIcon: _statusIcon,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: _borderColor, width: 1),
+              borderSide: BorderSide(
+                color: _borderColor,
+                width: 1,
+              ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: _borderColor, width: 1),
+              borderSide: BorderSide(
+                color: _borderColor,
+                width: 1.5
+              ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: _borderColor, width: 1.5),
+              borderSide: BorderSide(
+                color: _borderColor,
+                width: 1.5
+              ),
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: AppColors.border, width: 1),
+              borderSide: BorderSide(
+                color: AppColors.border,
+                width: 1
+              ),
             ),
           ),
         ),
@@ -116,7 +137,10 @@ class _LabeledTextFieldState extends State<LabeledTextField> {
             padding: const EdgeInsets.only(top: 4),
             child: Text(
               widget.errorText!,
-              style: const TextStyle(color: AppColors.error, fontSize: 12),
+              style: const TextStyle(
+                  color: AppColors.error,
+                  fontSize: 12
+              ),
             ),
           ),
         if (widget.status == FieldStatus.success && widget.successText != null)

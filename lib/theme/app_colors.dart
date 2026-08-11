@@ -22,6 +22,30 @@ class AppColors {
   static const border = Color(0xFFD8DEE2);
   static const skipChipBg = Color(0xFFE2F1F8);
   static const indicatorInactive = Color(0xFFDADADA);
+
+
+  /// Deep navy of the info banner on the Add BVN screen.
+  static const Color banner = Color(0xFF1B2B4B);
+
+  static const Color scaffold = Color(0xFFF2F4F7);
+
+  static const Color heading = Color(0xFF14243B);
+  static const Color body = Color(0xFF344054);
+  static const Color label = Color(0xFF7B8794);
+  static const Color hint = Color(0xFF98A2B3);
+
+  static const Color borderFocused = accent;
+
+  static const Color warning = Color(0xFFF2A73B);
+
+  static const Color disabled = Color(0xFFBDBDBD);
+  static const Color disabledText = Color(0xFFF3F4F6);
+
+  /// Pale grey-blue of the tooltip bubble and the "Skip Step" chip.
+  static const Color tooltip = Color(0xFFDFE7ED);
+
+  /// Inactive segment of the password strength meter.
+  static const Color meterEmpty = Color(0xFFB8C7D1);
 }
 
 class AppTextStyles {
@@ -50,3 +74,4 @@ class AppTextStyles {
     fontSize: 12,
   );
 }
+
