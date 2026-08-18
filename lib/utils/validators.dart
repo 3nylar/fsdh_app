@@ -56,7 +56,7 @@ class Validators {
     final hadBirthday = now.month > value.month ||
         (now.month == value.month && now.day >= value.day);
     if (!hadBirthday) age--;
-    if (age < 18) return 'You must be at least 18 years old';
+    if (age < 13) return 'You must be at least 13 years old';
     if (age > 120) return 'Enter a valid date of birth';
     return null;
   }
