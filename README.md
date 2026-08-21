@@ -59,7 +59,6 @@ Application
 
 ![Sign Up](assets/screenshots/signup.png)
 
-> Replace the screenshot paths above with the actual location of your screenshots in the repository.
 
 ## Project Structure
 
