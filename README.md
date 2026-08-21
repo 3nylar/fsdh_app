@@ -184,4 +184,6 @@ Software Engineering / Mobile Development
 
 This project is intended primarily as a demonstration and portfolio project.
 
+The FSDH name, branding, logos, designs, and other proprietary materials remain the property of their respective owners. No rights to these materials are granted through this repository.
+
 If the project contains proprietary FSDH assets, branding, designs, or company-owned materials, please refer to the appropriate usage and distribution permissions before reusing them.
