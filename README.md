@@ -158,7 +158,7 @@ This project was developed as part of my software engineering internship experie
 
 The project allowed me to work through the process of translating a financial-services mobile application experience into functional Flutter interfaces.
 
-## 🔮 Future Improvements
+## Future Improvements
 
 Potential improvements include:
 
@@ -180,7 +180,7 @@ Software Engineering / Mobile Development
 
 - GitHub: https://github.com/3nylar
 
-## 📄 License
+## License
 
 This project is intended primarily as a demonstration and portfolio project.
 
